@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CrystalsCollector Game</title>
+    <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to our external reset stylesheet-->
+  <link rel="stylesheet" href="assets/css/reset.css">
+
+  <!-- Added a link to our external stylesheet-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+</head>
+<body>
+    <header>
+        <h1>CrystalsCollector!</h1>
+    </header>
+    <!-- Should I use textarea instead of divs????-->
+    <div id=instruct>
+        <p>You will be given a random number at the start of the game</p>
+        <br>
+        <p>There are four crytstals below. By clicking on a crystal 
+            add a specific amount of points to your total score.
+        </p>
+        <br>
+        <p>You will win the game by matching your total score to the random 
+            number; you lose the game if your total score goes above the 
+            random number.
+        </p>
+        <br>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the value 
+            of each crystal.
+        </p>
+    </div>
+    <div id="randNum">
+        <p>39</p>
+    </div>
+    <div class="gameStats">
+        <p id="num-wins">Wins: <span></span></p>
+        <p id="num-losses">Losses: <span></span></p>
+
+    </div>
+    <!-- Images of crystals will go in the corresponding buttons.-->
+    <div class="buttons-crystals">
+        <button id="crystal-1"></button>
+        <button id="crystal-2"></button>
+        <button id="crystal-3"></button>
+        <button id="crystal-4"></button>
+    </div>
+
+    <div class="text-score">
+        <p>Your total score is: </p>
+    </div>
+    <div id="total-score" style="background-color:darkorchid;">
+        <p>0</p>
+    </div>
+    <footer id="attribution">
+        <p><a href="https://www.freepik.com/free-photos-vectors/design">Design vector created by freepik - www.freepik.com</a></p>
+    </footer>
+</body>
+</html>
