@@ -8,6 +8,8 @@ var crystalRandOne = 0;
 var crystalRandTwo = 0;
 var crystalRandThree = 0;
 var crystalRandFour = 0;
+//flag states whether a win/loss message is being displayed.
+var gameStatus = false; 
 
 //reset the game variables to start a new game;
 function resetGame() {
@@ -84,6 +86,14 @@ $(".crystals").click(function() {
     if (totalScore === randNum) {
         //user wins this game, so increment number of wins.
         numWins++;
+        //add a message showing user won this round
+        if (gameStatus == false){
+            $(".gameStats").prepend("<p id='game_status'>You won!!</p><br>");
+            gameStatus = true;
+        }
+        else{
+            $("#game_status").text("You won!!");
+        }
         //show the user the number of wins so far
         $("#number-wins span").text(numWins);
         //start a new game
@@ -104,6 +114,14 @@ $(".crystals").click(function() {
     else if (totalScore > randNum) {
         //user losses this game, so decrement number of losses.
         numLosses++;
+        //show user the newly generated random number to start the new game.
+        if (gameStatus == false){
+            $(".gameStats").prepend("<p id='game_status'>You lost!!</p><br>");
+            gameStatus = true;
+        }
+        else{
+            $("#game_status").text("You lost!!");
+        }
         //show the user the number of losses so far
         $("#number-losses span").text(numLosses);
         //start a new game
